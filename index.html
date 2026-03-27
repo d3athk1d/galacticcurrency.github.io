@@ -5,12 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYBORG TRAP | ARCHITECT & CREATOR</title>
     <style>
-        body { background-color: #0a0a0a; color: #00d4ff; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { border: 2px solid #333; padding: 40px; max-width: 900px; margin: auto; border-radius: 10px; box-shadow: 0 0 30px rgba(0, 212, 255, 0.15); background: #0d0d0d; }
-        h1 { font-size: 3rem; letter-spacing: 8px; text-transform: uppercase; margin-bottom: 5px; text-shadow: 2px 2px #333; }
-        .sub-header { color: #666; letter-spacing: 3px; margin-bottom: 30px; font-weight: bold; }
+        /* The Background Engine */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            filter: brightness(0.4) contrast(1.2); /* Makes neon pop while keeping text readable */
+            object-fit: cover;
+        }
+
+        body { 
+            background-color: #000; 
+            color: #00d4ff; 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0; 
+            padding: 20px; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { 
+            border: 2px solid #333; 
+            padding: 40px; 
+            max-width: 900px; 
+            margin: 50px auto; 
+            border-radius: 10px; 
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.3); 
+            background: rgba(10, 10, 10, 0.85); /* Transparent enough to see the astronaut */
+            backdrop-filter: blur(5px); /* Frosty glass effect */
+        }
+
+        h1 { font-size: 3rem; letter-spacing: 8px; text-transform: uppercase; margin-bottom: 5px; text-shadow: 0 0 10px #00d4ff; text-align: center; }
+        .sub-header { color: #fff; letter-spacing: 3px; margin-bottom: 30px; font-weight: bold; text-align: center; opacity: 0.7; }
+        
         .status-bar { background: #1a1a1a; padding: 12px; font-size: 0.85rem; margin-bottom: 30px; border-left: 6px solid #00d4ff; color: #fff; text-transform: uppercase; }
-        .video-box { background: #000; width: 100%; padding: 40px 0; margin-bottom: 40px; border: 1px dashed #444; text-align: center; }
+        
+        .video-box { background: rgba(0, 0, 0, 0.6); width: 100%; padding: 40px 0; margin-bottom: 40px; border: 1px dashed #00d4ff; text-align: center; }
+        
         .btn { display: inline-block; padding: 18px 35px; border: 2px solid #00d4ff; color: #00d4ff; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.4s; cursor: pointer; background: transparent; }
-        .btn:hover { background: #00d4ff; color: #000; box-shadow: 0 0 15px #00d4ff; }
-        .inventory-title { margin-top: 50px; text-align: left; border-bottom: 1px solid #333; padding-bottom: 10px; color: #fff; letter-spacing
+        .btn:hover { background: #00d4ff; color: #000; box-shadow: 0 0 25px #00d4ff; transform: scale(1.05); }
+
+        .inventory-title { margin-top: 50px; text-align: left; border-bottom: 1px solid #333; padding-bottom: 10px; color: #fff; letter-spacing: 2px; }
