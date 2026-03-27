@@ -5,52 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYBORG TRAP | ARCHITECT & CREATOR</title>
     <style>
-        /* VIDEO ENGINE */
+        /* THE VISIBILITY ENGINE - REMOVED FILTERS */
         #bg-video { 
-            position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; 
-            z-index: -1; filter: brightness(0.35) contrast(1.1); object-fit: cover; 
-            background-color: #000; 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            min-width: 100%; 
+            min-height: 100%; 
+            width: auto; 
+            height: auto; 
+            z-index: -100; 
+            transform: translateX(-50%) translateY(-50%); 
+            background: #000;
+            object-fit: cover;
         }
 
         body { 
-            background-color: #000; color: #00d4ff; font-family: 'Courier New', Courier, monospace; 
-            margin: 0; padding: 20px; overflow-x: hidden; 
+            background: transparent; /* Allows video to show through */
+            color: #00d4ff; 
+            font-family: 'Courier New', monospace; 
+            margin: 0; 
+            padding: 20px; 
         }
 
         .container { 
-            border: 1px solid #333; padding: 40px; max-width: 900px; margin: 40px auto; 
-            border-radius: 12px; box-shadow: 0 0 40px rgba(0, 212, 255, 0.2); 
-            background: rgba(10, 10, 10, 0.88); backdrop-filter: blur(8px); 
-            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid #333; 
+            padding: 40px; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            border-radius: 12px; 
+            background: rgba(0, 0, 0, 0.75); /* Made slightly more transparent */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            text-align: center;
         }
 
-        /* NEON GLOW ANIMATION */
-        h1 { 
-            font-size: 3rem; letter-spacing: 10px; text-transform: uppercase; 
-            margin-bottom: 5px; text-align: center;
-            color: #00d4ff;
-            text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-            animation: pulse 2s infinite alternate;
-        }
-
-        @keyframes pulse {
-            from { text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff; }
-            to { text-shadow: 0 0 10px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff; }
-        }
-
-        .sub-header { color: #fff; letter-spacing: 4px; margin-bottom: 35px; font-weight: bold; text-align: center; opacity: 0.8; }
-        .status-bar { background: #1a1a1a; padding: 12px; font-size: 0.8rem; margin-bottom: 35px; border-left: 6px solid #00d4ff; color: #00ff88; text-transform: uppercase; letter-spacing: 1px; }
-        .video-box { background: rgba(0, 0, 0, 0.5); width: 100%; padding: 45px 0; margin-bottom: 40px; border: 1px dashed #00d4ff; text-align: center; border-radius: 8px; }
+        h1 { font-size: 3rem; letter-spacing: 12px; text-shadow: 0 0 20px #00d4ff; text-transform: uppercase; margin-bottom: 10px; }
+        .btn { display: inline-block; padding: 15px 35px; border: 2px solid #00d4ff; color: #00d4ff; text-decoration: none; font-weight: bold; text-transform: uppercase; margin: 20px 0; }
+        .btn:hover { background: #00d4ff; color: #000; }
         
-        .btn { display: inline-block; padding: 18px 38px; border: 2px solid #00d4ff; color: #00d4ff; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; background: transparent; letter-spacing: 2px; }
-        .btn:hover { background: #00d4ff; color: #000; box-shadow: 0 0 30px #00d4ff; }
-
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left; font-size: 0.85rem; }
-        th { border-bottom: 2px solid #00d4ff; padding: 15px; color: #00d4ff; text-transform: uppercase; }
-        td { padding: 15px; border-bottom: 1px solid #222; color: #ccc; }
-        .status-active { color: #00ff88; font-weight: bold; }
-
-        .legal-footer { margin-top: 65px; font-size: 0.7rem; color: #555; border-top: 1px solid #222; padding-top: 25px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: rgba(0,0,0,0.5); }
+        th, td { padding: 12px; border-bottom: 1px solid #222; text-align: left; }
+        .active { color: #00ff88; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -60,32 +56,20 @@
     </video>
 
     <div class="container">
-        <div class="status-bar">[ SYSTEM: ONLINE ] // [ ASSETS: 100% ONE-STOP ]</div>
-
         <h1>CYBORG TRAP</h1>
-        <div class="sub-header">ARCHITECT & CREATOR</div>
-
-        <div class="video-box">
-            <a href="https://canva.link/uegf1mc8kdkm925" class="btn" target="_blank">WATCH THE REVEAL [EPK]</a>
-        </div>
+        <p style="letter-spacing: 5px; color: #fff; margin-bottom: 30px;">[ MASTERING THE MACHINE ]</p>
+        
+        <a href="https://canva.link/uegf1mc8kdkm925" class="btn" target="_blank">WATCH THE REVEAL</a>
 
         <table>
-            <thead>
-                <tr><th>Asset Name</th><th>Type</th><th>Rights</th></tr>
-            </thead>
+            <thead><tr><th>Asset</th><th>Genre</th><th>Status</th></tr></thead>
             <tbody>
-                <tr><td>ASSET_01 (GHOST)</td><td>HIP-HOP</td><td class="status-active">ONE-STOP</td></tr>
-                <tr><td>ASSET_02 (MAMA)</td><td>TRAP</td><td class="status-active">ONE-STOP</td></tr>
-                <tr><td>CYBORG_MANIFESTO</td><td>INDUSTRIAL</td><td class="status-active">ONE-STOP</td></tr>
+                <tr><td>ASSET_01 (GHOST)</td><td>HIP-HOP</td><td class="active">ONE-STOP</td></tr>
+                <tr><td>ASSET_02 (MAMA)</td><td>TRAP</td><td class="active">ONE-STOP</td></tr>
             </tbody>
         </table>
 
-        <div style="margin-top: 50px; text-align: center;">
-            <p style="color: #666; font-size: 0.7rem; margin-bottom: 15px; letter-spacing: 2px;">[ CONTACT INTERFACE ]</p>
-            <a href="mailto:devlinbelle8@gmail.com" class="btn" style="border-color: #fff; color: #fff;">BUSINESS INQUIRIES</a>
-        </div>
-
-        <div class="legal-footer">© 2026 CYBORG TRAP RECORDS // GALACTIC CURRENCY</div>
+        <a href="mailto:devlinbelle8@gmail.com" class="btn" style="border-color: #fff; color: #fff;">BUSINESS INQUIRIES</a>
     </div>
 
 </body>
